@@ -44,7 +44,7 @@ void withdrawMoney(Customer &cust, const int amnt) {
 
 void showBalance(const CreditCard &card) {
     // TODO: Anzeigen wieviel Geld noch auf der Kreditkarte ist.
-    printf("%i,- €\n", card.mBalance);
+    printf("%i,00 €\n", card.mBalance);
 }
 
 int main() {
