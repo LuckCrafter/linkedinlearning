@@ -29,7 +29,7 @@ Challenge 3:
 2. Geben Sie true zurueck, wenn die erste Variable kleiner ist als die zweite und die zweite kleiner ist als die dritte. Sonst gib false zurueck
 */
 bool isSort(int a, int b, int c){
-    return ( a<b && b<c);
+    return ( a<=b && b<=c);
 }
 
 int main(){
