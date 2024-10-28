@@ -1,7 +1,9 @@
 # LinkedIn Learning Coding Challenges
 
 ### Gliederung
-Hier muss eine Gliederung rein
+ - C++ Lernen (link)(ref)
+ - C++ Grundkurs 1 (link)(ref)
+ - C++ Grundkurs 2 (link)(ref)
 
 ### TODO / Notes
  - Grundkurs C++ (mal mit unique_ptr und rawptr)
