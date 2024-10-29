@@ -4,7 +4,7 @@
 class Fahrzeug {
     public:
         Fahrzeug();
-        // TODO: Virtuellize accelerate as pure method
+        void accelerate(float seconds);// TODO: Virtuellize accelerate as pure method
         void showValues() const;
         float getSpeed() const;
         void setSpeed(float newSpeed);

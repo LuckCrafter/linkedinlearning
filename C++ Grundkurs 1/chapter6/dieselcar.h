@@ -5,7 +5,7 @@
 
 class DieselCar : public PKW {
     public: 
-        // TODO: Override accelerate
+        void accelerate(const float seconds) override;// TODO: Override accelerate
         DieselCar();
     private:
         const float mAcceleration = 10000.0f; // km/(h^2)

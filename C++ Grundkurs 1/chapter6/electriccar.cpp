@@ -5,5 +5,5 @@ ElectricCar::ElectricCar() {
 }
 
 void ElectricCar::accelerate(const float seconds) {
-    setSpeed(getSpee() + mAcceleration*(seconds/3600))
+    setSpeed(getSpeed() + mAcceleration*(seconds/3600))
 }

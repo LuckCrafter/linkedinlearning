@@ -4,7 +4,7 @@
 #include <iostream>
 
 int main() {
-    DieselCarp308;
+    DieselCar p308;
     ElectricCar tesla;
 
     // Accelerate for one second

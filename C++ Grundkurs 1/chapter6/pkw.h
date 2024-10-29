@@ -16,6 +16,6 @@ class PKW : public Fahrzeug {
 
     private:
         float mPosition = 0.0f; // km
-}
+};
 
 #endif // PKW_H
