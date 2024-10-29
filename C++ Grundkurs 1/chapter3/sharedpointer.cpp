@@ -1,6 +1,18 @@
 #include <iostream>
 #include <memory>
 
+/*
+    Prefix for Class/Structures
+
+    m for members
+    c for constants/readonlys
+    p for pointer (and pp for pointer to pointer)
+    v for volatile
+    s for static
+    i for indexes and iterators
+    e for events
+*/
+
 struct SimpleNode {
     int mItem = 0;
     std::shared_ptr<SimpleNode> mNext;

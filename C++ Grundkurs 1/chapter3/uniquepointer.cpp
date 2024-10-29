@@ -1,25 +1,38 @@
 #include <iostream>
 #include <memory>
 
+/*
+    Prefix for Class/Structures
+
+    m for members
+    c for constants/readonlys
+    p for pointer (and pp for pointer to pointer)
+    v for volatile
+    s for static
+    i for indexes and iterators
+    e for events
+*/
+
 struct List {
-    int value;
-    std::unique_ptr<List> next;
+    int m_value {0};
+    std::unique_ptr<List> m_next;
+    ~List(){m_next=nullptr;}
 };
 
 std::unique_ptr<List> head = nullptr;
 
 void addElements(const int val) {
     std::unique_ptr<List> ptr = std::make_unique<List>();
-    ptr -> value = val;
-    ptr -> next = std::move(head);
+    ptr -> m_value = val;
+    ptr -> m_next = std::move(head);
     head = std::move(ptr);
 }
 
 void printList() {
     std::unique_ptr<List> ptr = std::move(head);
     while (ptr) {
-        std::cout << ptr -> value << std::endl;
-        ptr = std::move(ptr -> next);
+        std::cout << ptr -> m_value << std::endl;
+        ptr = std::move(ptr -> m_next);
     }
 }
 
