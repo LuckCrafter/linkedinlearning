@@ -28,8 +28,8 @@ Challenge 3:
 1. Erstellen Sie eine bool Funktion, die 3 integer Parameter übernimmt.
 2. Geben Sie true zurueck, wenn die erste Variable kleiner ist als die zweite und die zweite kleiner ist als die dritte. Sonst gib false zurueck
 */
-bool isSort(int a, int b, int c){
-    return ( a<=b && b<=c);
+bool isSmaller(int a, int b, int c){
+    return ( a<b && b<c);
 }
 
 int main(){
