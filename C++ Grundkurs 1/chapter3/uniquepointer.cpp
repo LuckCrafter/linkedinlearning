@@ -17,7 +17,7 @@ struct List {
     int m_value;
     std::unique_ptr<List> m_next;
     List() {
-        m_next=nullptr;
+        m_next = nullptr;
         m_value = 0;
     }
 };
@@ -48,7 +48,7 @@ void printList() {
 }
 
 int main() {
-    
+
     addElements(12);
     addElements(22);
     addElements(342);
