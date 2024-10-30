@@ -23,7 +23,8 @@ void mainOld() {
 }
 
 // new variant
-void mainNew() {
+auto mainNew() -> void // alternative functionsyntax
+{
     int x = 3;
     int y = 3;
     int z = 30;
@@ -46,3 +47,10 @@ int main(){
     mainNew();
     return 0;
 }
+
+/*
+   [ ](parameter) -> return {code} // nichts
+   [=](parameter) -> return {code} // alles als Kopie
+   [&](parameter) -> return {code} // alles als Referenz
+[this](parameter) -> return {code} // sogar this-Zeiger möglich
+*/
