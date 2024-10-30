@@ -14,10 +14,21 @@
 */
 
 struct List {
-    int m_value {0};
+    int m_value;
     std::unique_ptr<List> m_next;
-    ~List(){m_next=nullptr;}
+    List() {
+        m_next=nullptr;
+        m_value = 0;
+    }
 };
+
+/*
+Or Short
+struct List {
+    int m_value {0};
+    std::unique_ptr<List> m_next {nullptr};
+};
+*/
 
 std::unique_ptr<List> head = nullptr;
 
@@ -37,11 +48,13 @@ void printList() {
 }
 
 int main() {
+    
     addElements(12);
     addElements(22);
     addElements(342);
     addElements(145);
 
     printList();
-    return 0;
+
+    return 0; 
 }
