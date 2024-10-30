@@ -21,7 +21,7 @@ struct SimpleList{
         mNote=0;
     }
     ~SimpleList(){
-        mNext=nullptr;
+        std::free(mNext); // is this enought?
     }
 };
 
@@ -35,10 +35,11 @@ void addElements(const int value) {
 }
 
 void printList() {
-    SimpleList* ptr = list;
-    while(ptr) {
+    SimpleList* ptr;
+    while(list) {
+        ptr = list;
         std::cout << ptr->mNote << std::endl;
-        ptr = ptr->mNext;
+        list = ptr->mNext;
     }
 }
 
