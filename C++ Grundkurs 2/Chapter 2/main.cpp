@@ -41,3 +41,8 @@ void mainNew() {
     result = calc(30,3);
     std::cout << result << std::endl;
 }
+
+int main(){
+    mainNew();
+    return 0;
+}
