@@ -14,8 +14,11 @@
 */
 
 struct SimpleNode {
-    int mItem = 0;
+    int mItem;
     std::shared_ptr<SimpleNode> mNext;
+    SimpleNode(){
+        mItem = 0;
+    }
 };
 
 std::shared_ptr<SimpleNode> list;
