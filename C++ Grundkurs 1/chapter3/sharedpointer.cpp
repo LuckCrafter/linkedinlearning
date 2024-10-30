@@ -21,7 +21,7 @@ struct SimpleNode {
     }
 };
 
-std::shared_ptr<SimpleNode> list;
+std::shared_ptr<SimpleNode> list {nullptr};
 
 void addElements(const int value) {
     auto ptr = std::make_shared<SimpleNode>();

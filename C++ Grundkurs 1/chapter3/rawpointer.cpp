@@ -26,7 +26,7 @@ struct SimpleList{
     }
 };
 
-SimpleList* list = nullptr;
+SimpleList* list {nullptr};
 
 void addElements(const int value) {
     SimpleList* ptr = new SimpleList;

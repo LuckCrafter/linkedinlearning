@@ -30,7 +30,7 @@ struct List {
 };
 */
 
-std::unique_ptr<List> head = nullptr;
+std::unique_ptr<List> head {nullptr};
 
 void addElements(const int val) {
     std::unique_ptr<List> ptr = std::make_unique<List>();
