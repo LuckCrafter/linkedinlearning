@@ -18,7 +18,7 @@ struct SimpleList{
     SimpleList* mNext;
 
     SimpleList(){
-        mNote= 0;
+        mNote = 0;
         mNext = nullptr;
     }
     ~SimpleList(){

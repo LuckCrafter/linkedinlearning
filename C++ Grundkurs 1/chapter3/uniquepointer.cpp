@@ -48,7 +48,6 @@ void printList() {
 }
 
 int main() {
-
     addElements(12);
     addElements(22);
     addElements(342);
