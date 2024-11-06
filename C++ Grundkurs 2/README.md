@@ -1,4 +1,4 @@
-# C++ Grundkurs 1
+# C++ Grundkurs 2
 
 ### Chapter 1:
   - Templates
