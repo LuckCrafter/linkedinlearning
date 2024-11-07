@@ -12,14 +12,14 @@ public:
     Node()
     {
         daten_ = 0;
-        next_ = NULL;
+        next_ = nullptr;
     }
 
     // Daten Konstruktor
     Node(int daten)
     {
         daten_ = daten;
-        next_ = NULL;
+        next_ = nullptr;
     }
 };
 
@@ -75,7 +75,7 @@ int main()
 
     // aufraumen single linked list
     aktuelles_element = head;
-    while (aktuelles_element != NULL)
+    while (aktuelles_element != nullptr)
     {
         Node *naechstes_element = aktuelles_element->next_;
         delete aktuelles_element;
