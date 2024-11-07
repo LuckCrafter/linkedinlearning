@@ -1,9 +1,15 @@
 #include <iostream>
 
-double exponentFunktion(int basis, int exponent)
+double exponentFunktion(const int basis, const int exponent)
 {
+    if (basis==0&&exponent<0) return 0;
+    bool posExp {(exponent>=0)};
+    int ex = (posExp) ? exponent : -exponent;
     // Implementieren Sie hier die exponentialfunktion
-    return 0.0;
+    double result=1;
+    for(int i {0};i< ex;++i)
+      result*=basis;
+    return (posExp) ? result : 1/result;
 }
 
 int main()
