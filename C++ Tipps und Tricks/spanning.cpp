@@ -4,6 +4,8 @@
 #include <list>
 #include <span>
 
+/* C++20 */
+
 void printC(std::span<int> container) {
     for(const auto& e : container)
         std::cout << e << " ";
