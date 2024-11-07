@@ -1,19 +1,26 @@
 
 #include <iostream>
 #include <thread>
+//#include <atomic>
+/*or via mutex*/
+#include <mutex>
 
 class ZaehlerImpl{
     private:
+        //std::atomic<int> zaehler_;
         int zaehler_;
-
+        std::mutex mutex;
 
     public:
         ZaehlerImpl(){ zaehler_ = 0;};
         ~ZaehlerImpl(){};
 
         void erhoeheZahler(int zahl){
-            // todo implementieren Sie hier eine thread safe erhoehung um zahl
-             std::cout << "Erhoehe um " << zahl << std::endl;
+            // todo implementieren Sie hier eine thread safe erhoehung um zahl /* lol changed to atomic :p */
+            mutex.lock();
+            zaehler_+=zahl;
+            std::cout << "Erhoehe um " << zahl << std::endl;
+            mutex.unlock();
         }
 
         void ausgabeZaehler(){
