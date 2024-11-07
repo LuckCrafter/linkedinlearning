@@ -22,7 +22,7 @@ struct SimpleList{
         mNext = nullptr;
     }
     ~SimpleList(){
-        std::free(mNext); // is this enought?
+        delete[] mNext; // is this enought?
     }
 };
 
