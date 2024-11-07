@@ -16,6 +16,8 @@ void printC(std::span<int> container) {
 int main(){
     #if __cplusplus < 202002L
         return 0;
+    #endif
+    
     int arr1 [] {1,2,3,4,5,6,7,8};
     std::array<int, 8> arr2 {1,2,3,4,5,6,7,8};
     std::vector<int> arr3 {1,2,3,4,5,6,7,8};
