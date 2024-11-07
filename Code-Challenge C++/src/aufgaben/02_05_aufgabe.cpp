@@ -2,6 +2,14 @@
 #include <iostream>
 #include <vector>
 
+template<typename T>
+T mittelwertFunktion(std::vector<T> list) {
+    T sum {0};
+    for (T i : list)
+      sum+=i;
+    return (sum/list.size());
+}
+
 int main()
 {
     std::vector<int> eingabe_int;
@@ -20,10 +28,10 @@ int main()
 
     // todo schrieben Sie eine Funktion die den Mittelwert berechnet und hier zurückgibt
     // Beispiel: int mittelwert_int = mittelwertFunktion(eingabe_int);
-    int mittelwert_int = 0;
-    uint mittelwert_uint = 0;
-    float mittelwert_float = 0.0;
-    double mittelwert_double = 0.0;
+    int mittelwert_int = mittelwertFunktion(eingabe_int);
+    uint mittelwert_uint = mittelwertFunktion(eingabe_uint);
+    float mittelwert_float = mittelwertFunktion(eingabe_float);
+    double mittelwert_double = mittelwertFunktion(eingabe_double);
 
     std::cout << "Mittelwert int:    " << mittelwert_int << std::endl;
     std::cout << "Mittelwert uint:   " << mittelwert_uint << std::endl;
