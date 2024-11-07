@@ -1,7 +1,12 @@
 #include <iostream>
+#include <vector>
 
 class MaxStack
 {
+
+private:
+    std::vector<int> list {0};
+    std::vector<int> maxs {0};
 
 public:
     MaxStack(){};
@@ -10,20 +15,24 @@ public:
     void push(int element)
     {
         // todo implementieren Sie die Push Funtkion
+        int _max = (list.back()<element) ? element : list.back();
+        maxs.push_back(_max);
+        list.push_back(element);
     }
 
     int pop()
     {
         // todo implementieren Sie die Pop Funktion
-        int last_element = 0;
+        int last_element = list.back();
+        list.pop_back();
+        maxs.pop_back();
         return last_element;
     }
 
     int max()
     {
         // todo implementieren Sie die max Funktion
-        int max_element = 0;
-        return max_element;
+        return maxs.back();
     }
 };
 
