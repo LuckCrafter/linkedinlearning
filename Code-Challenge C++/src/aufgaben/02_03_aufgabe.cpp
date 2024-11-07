@@ -27,10 +27,28 @@ void ausgabeSingleLinkedList(Node *head)
 {
     // todo implentieren der Ausgabefunktion
     std::cout << "Ausgabe Single Linked List" << std::endl;
+
+    auto ptr = head;
+    while(ptr) {
+        std::cout << ptr->daten_ << std::endl;
+        ptr=ptr->next_;
+    }
 }
 
 Node *loescheNLetztesElement(Node *head, int index)
 {
+    auto _head = head;
+    auto _last = head;
+    for (int i {0};i<index;++i) {
+        _head=_head->next_;
+        if (i<index-1){
+            _last = _last->next_;
+        }
+        
+    }
+    _last->next_=_head->next_;
+    delete _head;
+
     // todo implentieren der Loeschfunktion
     return head;
 }
