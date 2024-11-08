@@ -7,7 +7,7 @@
  - lambda
 
 ### Chapter 3:
- - Multithreading
+ - Multithreading (dont use thread, instead(jthread))
  - mutex / guards
  - atomics
 
