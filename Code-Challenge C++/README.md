@@ -1,7 +1,3 @@
-
-
-
-
 # Code-Challenges für C++
 
 ### Challange 01
