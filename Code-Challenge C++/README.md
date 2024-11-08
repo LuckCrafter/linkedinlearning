@@ -1,4 +1,35 @@
+
+
+
+
 # Code-Challenges für C++
+
+### Challange 01
+ - Description
+### Challange 02
+ - Description
+### Challange 03
+ - Description
+### Challange 04
+ - Description
+### Challange 05
+ - Description
+### Challange 06
+ - Description
+### Challange 07
+ - Description
+### Challange 08
+ - Description
+### Challange 09
+ - Description
+### Challange 10
+ - Description
+### Challange 11
+ - Description
+### Challange 12
+ - Description
+
+---
 
 Dies ist das Repository für den **LinkedIn Learning** Kurs `Code-Challenges für C++`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
 
