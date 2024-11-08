@@ -3,11 +3,12 @@
 #include <thread>
 #include <mutex>
 #include <condition_variable>
+#include <atomic>
 
 class FooBarAusgabe
 {
 private:
-    int zaehler_;
+    std::atomic<int> zaehler_;
     std::mutex zaehler_mutex_;
     std::condition_variable zaehler_condition_;
 
