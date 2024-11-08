@@ -2,11 +2,12 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <mutex>
 
 class FooBarAusgabe{
     public:
-        FooBarAusgabe(){};
-        ~FooBarAusgabe(){};
+        FooBarAusgabe(){mutex_b.lock();};
+        ~FooBarAusgabe(){mutex_b.unlock();};
 
         void runFoo(){
             for(int i = 0; i < 10; i++){
@@ -23,13 +24,19 @@ class FooBarAusgabe{
         }
 
         void foo(){
-            // todo implementieren Sie hier 
+            // todo implementieren Sie hier
+            mutex_a.lock();
              std::cout << "foo";
+            mutex_b.unlock();
         }
         void bar(){
             //todo implementieren Sie hier
+            mutex_b.lock();
             std::cout << "bar " << std::endl;
+            mutex_a.unlock();
         }
+    private:
+        std::mutex mutex_a, mutex_b;
 };
 
 int main()
