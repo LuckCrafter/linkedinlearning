@@ -40,17 +40,17 @@ int main()
 
     {
         Maus obj;
-        std::cout << obj.getAlter();
+        std::cout << obj.getAlter() << " ";
         obj.machGerausch();
     }
     {
         Hund obj;
-        std::cout << obj.getAlter();
+        std::cout << obj.getAlter() << " ";
         obj.machGerausch();
     }
     {
         Katze obj;
-        std::cout << obj.getAlter();
+        std::cout << obj.getAlter() << " ";
         obj.machGerausch();
     }
     return 0;
