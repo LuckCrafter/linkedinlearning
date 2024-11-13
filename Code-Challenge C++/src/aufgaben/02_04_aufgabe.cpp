@@ -1,15 +1,43 @@
 #include <string>
 #include <iostream>
+#include <array>
+
+const std::array<std::array<char, 2>, 3> g_symbols {{{'a','z'},{'A','Z'},{'0','9'}}};
+
+bool between(const char c, const char a, const char b) {
+    return (a<=c&&c<=b);
+}
 
 std::string verschluesseln(std::string eingabe, int schluessel)
 {
-    std::string resultat("leer");
+
+    std::string resultat(eingabe);
+    for (int i {0}; i < resultat.length(); ++i){
+        for (auto symbol : g_symbols) {
+            if(!between(resultat[i],symbol[0],symbol[1])) continue;
+
+            resultat[i]+=schluessel;
+            while(!between(resultat[i],symbol[0],symbol[1]))
+              resultat[i] -= (symbol[1]-symbol[0]+1); // add Rotation
+            break;
+        }
+    }
     return resultat;
 }
 
 std::string entschluesseln(std::string eingabe, int schluessel)
 {
-    std::string resultat("leer");
+    std::string resultat(eingabe);
+    for (int i {0}; i < resultat.length(); ++i) {
+        for (auto symbol : g_symbols) {
+            if(!between(resultat[i],symbol[0],symbol[1])) continue;
+            
+            resultat[i]-=schluessel;
+            while(!between(resultat[i],symbol[0],symbol[1]))
+              resultat[i] += (symbol[1]-symbol[0]+1); // add Rotation
+            break;
+        }
+    }
     return resultat;
 }
 
